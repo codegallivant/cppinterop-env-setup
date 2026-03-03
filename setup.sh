@@ -1,4 +1,4 @@
-# Setup LLVM
+# Build LLVM
 cd llvm-project
 mkdir build 
 cd build 
@@ -26,7 +26,7 @@ export CPLUS_INCLUDE_PATH="${CPLUS_INCLUDE_PATH}:${LLVM_DIR}/llvm/include:${LLVM
 # Build CppInterOp
 mkdir CppInterOp/build/
 cd CppInterOp/build/
-cmake -DBUILD_SHARED_LIBS=ON -DLLVM_DIR=$LLVM_DIR/build/lib/cmake/llvm -DClang_DIR=$LLVM_DIR/build/lib/cmake/clang -DCMAKE_INSTALL_PREFIX=$CPPINTEROP_DIR ..
+cmake -DBUILD_SHARED_LIBS=ON -DLLVM_DIR=$LLVM_DIR/build/lib/cmake/llvm -DClang_DIR=$LLVM_DIR/build/lib/cmake/clang -DCMAKE_INSTALL_PREFIX=$CPPINTEROP_DIR -DCMAKE_BUILD_TYPE=Release ..
 cmake --build . --target install --parallel $(nproc --all)
 
 cd ../..

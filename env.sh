@@ -1,4 +1,4 @@
-export PARENT_DIR="/dvolume"
+export PARENT_DIR="/compiler-research"
 export LLVM_DIR="$PARENT_DIR/llvm-project"
 export CB_PYTHON_DIR="$PARENT_DIR/cppyy-backend/python"
 export CPPINTEROP_DIR="$CB_PYTHON_DIR/cppyy_backend"
