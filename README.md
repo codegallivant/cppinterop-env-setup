@@ -7,7 +7,7 @@ Fast automated setup procedure for development of [https://github.com/compiler-r
 ```bash
 mkdir compiler-research
 cd compiler-research
-git clone <REPO URL> env-setup
+git clone git@github.com:codegallivant/cppinterop-env-setup.git env-setup
 ./env-setup/clone.sh # clone repositories
 docker build -t cppinterop:v1 env-setup # Build Docker image
 ```
